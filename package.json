@@ -1,23 +1,21 @@
 {
-  "name": "javascript-tienda",
+  "name": "tienda-javascript",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss estilos/estilos.scss css/styles.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matiaspiuma1/javascript-tienda.git"
+    "url": "git+https://github.com/matiaspiuma1/tienda-javascript-coder.git"
   },
-  "author": "",
+  "author": "Matias Piuma",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/matiaspiuma1/javascript-tienda/issues"
+    "url": "https://github.com/matiaspiuma1/tienda-javascript-coder/issues"
   },
-  "homepage": "https://github.com/matiaspiuma1/javascript-tienda#readme",
+  "homepage": "https://github.com/matiaspiuma1/tienda-javascript-coder#readme",
   "devDependencies": {
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.14"
