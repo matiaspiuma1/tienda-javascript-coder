@@ -19,6 +19,9 @@ function imprimirPasarelaPago() {
                                             <input type="text" class="inputPago" placeholder="Apellido" />
                                         </div>
                                         <div>
+                                            <input type="text" class="inputPago" placeholder="Direccion de Envio" />
+                                        </div>
+                                        <div>
                                             <input type="number" class="inputPago" required placeholder="Número de Tarjeta" />
                                         </div>
                                         <div>
