@@ -1,10 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
 .contenedorCanvas {
   text-align: center;
   background-color: #334756; }
 
 .tituloCanvas {
   font-size: 25px;
-  color: #F0A500; }
+  color: #f0a500; }
 
 .precioTotal {
   margin-top: 2rem;
@@ -18,8 +27,10 @@
 
 .precioItem {
   font-size: 1.5rem;
-  color: #F0A500;
+  color: #f0a500;
   margin: 0.1rem; }
+  body.dark .precioItem {
+    color: black; }
 
 .inputCantidadItem {
   width: 8rem;
@@ -39,31 +50,80 @@
   margin-top: 4px;
   font-size: 1.5rem; }
 
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white; }
+
+.tituloPago {
+  text-align: center;
+  font-size: 3.5rem; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
 
-body {
-  background-image: url(https://cutewallpaper.org/21/gaming-background-images/OC-Minimal-Gaming-Background-4800x2400-wallpapers.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  background-position: center center; }
+html {
+  font-size: 62.5%; }
+
+.btnCompra {
+  width: 15rem;
+  height: 3.5rem;
+  background-color: #334756;
+  border: none;
+  font-size: 1.8rem;
+  text-align: center; }
+
+.btnCompra:hover {
+  background-color: #334756; }
+
+.btnCompra:active {
+  border: none; }
+
+.btnCompra:focus {
+  background-color: #334756; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
 
 html {
   font-size: 62.5%; }
 
+body {
+  background-color: #c7c7c7; }
+  body.dark {
+    background-color: #494949; }
+
+.tituloProductos {
+  margin-top: 5.5rem;
+  font-size: 3.5rem; }
+  body.dark .tituloProductos {
+    color: white; }
+
 .barraNavegacion {
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  position: fixed;
+  z-index: 10; }
 
 #menuNavbar a {
-  font-size: 2rem;
-  text-decoration: none; }
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black; }
+
+.contenedorBienvenida {
+  padding-top: 4.5rem; }
+
+.imagenBienvenida {
+  height: 100rem; }
 
 .productos {
   display: flex;
@@ -75,21 +135,25 @@ html {
   justify-content: space-evenly;
   align-items: center; }
 
-.btnCompra {
-  text-align: center;
-  width: 15rem;
-  background-color: #9ef300;
-  border: none; }
+.listaFiltros {
+  margin-top: 2rem; }
 
-@media (min-width: 1024px) {
-  .productos {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    margin: 2rem; } }
+.listaFiltros a {
+  font-size: 2rem;
+  border-radius: 0.8rem;
+  height: 6rem;
+  margin-bottom: 1.5rem;
+  background-color: #334756; }
+
+.active {
+  color: #f0a500; }
+
+.listaFiltros a:hover {
+  color: #f0a500; }
 
 .card {
   text-align: center;
-  border-radius: 10px;
+  border-radius: 1rem;
   box-shadow: 1.4rem 1.4rem 2.7rem -1rem rgba(0, 0, 0, 0.64);
   margin-bottom: 2.5rem;
   color: black; }
@@ -107,3 +171,179 @@ html {
 .btnCarrito {
   border: none;
   background-color: transparent; }
+
+.tituloProductos {
+  color: black; }
+
+.inputPago {
+  font-size: 2rem;
+  color: black;
+  height: 3.5rem;
+  width: 30rem;
+  margin-bottom: 1.5rem; }
+
+.btnPago {
+  border-radius: 0.5rem;
+  border: none;
+  height: 4rem;
+  width: 30rem;
+  font-size: 2rem;
+  background-color: #334756; }
+
+.modal-title {
+  font-size: 2.5rem;
+  color: orange; }
+
+.modal-body {
+  font-size: 2.5rem; }
+
+.btnRefrescarPag {
+  font-size: 2rem; }
+
+.alertaProducto {
+  border-radius: 2rem;
+  font-size: 2rem;
+  margin-left: 2rem; }
+
+body.dark #contenedorCarrito {
+  background-color: #838383; }
+
+.hide {
+  display: none; }
+
+@media (max-width: 425px) {
+  #menuNavbar a {
+    font-size: 2rem; }
+  .tituloProductos {
+    margin-top: 9rem; }
+  .imagenBienvenida {
+    height: 100%; } }
+
+@media (max-width: 768px) {
+  .imagenBienvenida {
+    height: 100%; } }
+
+@media (min-width: 1024px) {
+  .productos {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    margin: 2rem; } }
+
+.modoOscuro {
+  background-color: #595a5a;
+  width: 5rem;
+  border-radius: 5rem;
+  height: 2.5rem;
+  border: none;
+  display: flex;
+  outline: none;
+  position: relative;
+  cursor: pointer; }
+  .modoOscuro::after {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 10rem;
+    transition: 0.3s ease all;
+    box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2); }
+  .modoOscuro.active {
+    background: orange;
+    color: black; }
+    .modoOscuro.active::after {
+      right: 0;
+      left: unset; }
+  .modoOscuro span {
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.5rem;
+    display: block;
+    background: none;
+    color: #fff; }
+
+body.dark .itemProducto {
+  background-color: #a8a8a8; }
+
+.sobreNosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
+  body.dark .sobreNosotros {
+    background-color: #505050;
+    color: white; }
+
+.tituloSomos {
+  font-weight: bold;
+  margin-bottom: 5rem;
+  font-size: 5.5rem;
+  text-align: center;
+  margin-top: 5rem; }
+
+.textoSomos {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  padding-left: 20%;
+  padding-right: 20%; }
+
+.titulotienda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #122436;
+  font-size: 5rem;
+  color: white;
+  height: 20rem; }
+
+.pieDePagina {
+  display: flex;
+  flex-direction: row;
+  background-color: #122436;
+  height: 25rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; }
+  .pieDePagina a {
+    color: white; }
+
+.tituloContacto {
+  text-align: center;
+  font-size: 6rem;
+  padding-top: 8rem; }
+  body.dark .tituloContacto {
+    color: white; }
+
+.subtituloContacto {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 3rem; }
+  body.dark .subtituloContacto {
+    color: white; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; }
+  form input {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem; }
+  form textarea {
+    width: 70%;
+    margin-bottom: 2rem; }
+
+.botonContacto {
+  border: none;
+  text-align: center;
+  width: 6rem;
+  margin-bottom: 3.3rem; }

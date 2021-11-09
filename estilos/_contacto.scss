@@ -1,0 +1,45 @@
+.tituloContacto {
+	text-align: center;
+	font-size: 6rem;
+	padding-top: 8rem;
+
+	body.dark & {
+		color: white;
+	}
+}
+
+.subtituloContacto {
+	padding-top: 3rem;
+	text-align: center;
+	font-size: 3rem;
+
+	body.dark & {
+		color: white;
+	}
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+
+	input {
+		width: 90%;
+		padding: 1rem;
+		margin: 1rem;
+	}
+
+	textarea {
+		width: 70%;
+		margin-bottom: 2rem;
+	}
+}
+
+.botonContacto {
+	border: none;
+	text-align: center;
+	width: 6rem;
+	margin-bottom: 3.3rem;
+}

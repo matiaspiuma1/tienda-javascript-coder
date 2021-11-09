@@ -1,0 +1,185 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #c7c7c7;
+
+	&.dark {
+		background-color: rgb(73, 73, 73);
+	}
+}
+
+.tituloProductos {
+	margin-top: 5.5rem;
+	font-size: 3.5rem;
+
+	body.dark & {
+		color: white;
+	}
+}
+
+.barraNavegacion {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 1rem;
+	position: fixed;
+	z-index: 10;
+}
+
+#menuNavbar a {
+	font-size: 2.5rem;
+	text-decoration: none;
+	color: black;
+}
+
+.contenedorBienvenida {
+	padding-top: 4.5rem;
+}
+
+.imagenBienvenida {
+	height: 100rem;
+}
+
+.productos {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.listaFiltros {
+	margin-top: 2rem;
+}
+
+.listaFiltros a {
+	font-size: 2rem;
+	border-radius: 0.8rem;
+	height: 6rem;
+	margin-bottom: 1.5rem;
+	background-color: #334756;
+}
+
+.active {
+	color: #f0a500;
+}
+
+.listaFiltros a:hover {
+	color: #f0a500;
+}
+
+.card {
+	text-align: center;
+	border-radius: 1rem;
+	box-shadow: 1.4rem 1.4rem 2.7rem -1rem rgba(0, 0, 0, 0.64);
+	margin-bottom: 2.5rem;
+	color: black;
+}
+
+.card-title {
+	font-size: 2rem;
+}
+
+.card-text {
+	font-size: 2.2rem;
+}
+
+.imagenesProductos {
+	height: 23rem;
+	width: 23rem;
+}
+
+.btnCarrito {
+	border: none;
+	background-color: transparent;
+}
+
+.tituloProductos {
+	color: black;
+}
+
+.inputPago {
+	font-size: 2rem;
+	color: black;
+	height: 3.5rem;
+	width: 30rem;
+	margin-bottom: 1.5rem;
+}
+
+.btnPago {
+	border-radius: 0.5rem;
+	border: none;
+	height: 4rem;
+	width: 30rem;
+	font-size: 2rem;
+	background-color: #334756;
+}
+
+.modal-title {
+	font-size: 2.5rem;
+	color: orange;
+}
+
+.modal-body {
+	font-size: 2.5rem;
+}
+
+.btnRefrescarPag {
+	font-size: 2rem;
+}
+
+.alertaProducto {
+	border-radius: 2rem;
+	font-size: 2rem;
+	margin-left: 2rem;
+}
+
+#contenedorCarrito {
+	body.dark & {
+		background-color: rgb(131, 131, 131);
+	}
+}
+
+.hide {
+	display: none;
+}
+
+@media (max-width: 425px) {
+	#menuNavbar a {
+		font-size: 2rem;
+	}
+
+	.tituloProductos {
+		margin-top: 9rem;
+	}
+
+	.imagenBienvenida {
+		height: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.imagenBienvenida {
+		height: 100%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.productos {
+		display: grid;
+		grid-template-columns: 2fr 2fr 2fr;
+		margin: 2rem;
+	}
+}

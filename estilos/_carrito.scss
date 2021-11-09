@@ -1,48 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
 .contenedorCanvas {
-    text-align: center;
-    background-color: #334756;
+	text-align: center;
+	background-color: #334756;
 }
 
 .tituloCanvas {
-    font-size: 25px;
-    color: #F0A500;
+	font-size: 25px;
+	color: #f0a500;
 }
 
 .precioTotal {
-    margin-top: 2rem;
-    font-size: 2.3rem;
-    color: black;
+	margin-top: 2rem;
+	font-size: 2.3rem;
+	color: black;
 }
 
 .nombreProducto {
-    font-size: 1.5rem;
-    text-align: center;
-    color: black;
+	font-size: 1.5rem;
+	text-align: center;
+	color: black;
 }
 
 .precioItem {
-    font-size: 1.5rem;
-    color: #F0A500;
-    margin: 0.1rem;
+	font-size: 1.5rem;
+	color: #f0a500;
+	margin: 0.1rem;
+
+	body.dark & {
+		color: black;
+	}
 }
 
 .inputCantidadItem {
-    width: 8rem;
-    height: 3rem;
-    font-size: 1.5rem;
+	width: 8rem;
+	height: 3rem;
+	font-size: 1.5rem;
 }
 
 .imagenCanvas {
-    height: 10rem;
-    width: 10rem;
+	height: 10rem;
+	width: 10rem;
 }
 
 .finalizarCompraBtn {
-    border: none;
-    color: white;
-    background-color: #334756;
-    height: 4rem;
-    width: 100%;
-    margin-top: 4px;
-    font-size: 1.5rem;
+	border: none;
+	color: white;
+	background-color: #334756;
+	height: 4rem;
+	width: 100%;
+	margin-top: 4px;
+	font-size: 1.5rem;
+}
+
+a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+}
+
+.tituloPago {
+	text-align: center;
+	font-size: 3.5rem;
 }

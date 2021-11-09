@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- FUENTE -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+
+		<!-- FONT AWESOME -->
+		<script src="https://kit.fontawesome.com/396509588b.js" crossorigin="anonymous"></script>
+
+		<!-- BOOTSTRAP -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/css/styles.css" />
+		<title>M-Store | Tienda de Periféricos</title>
+	</head>
+	<body>
+		<!--------------------- NAVBAR --------------------->
+
+		<div class="container-fluid barraNavegacion">
+			<nav class="navbar navbar-expand-lg navbar-secondary bg-secondary" id="menuNavbar">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="index.html">
+						<img src="imagenes/icono-nav2.png" alt="Icono Tienda" />
+						<span class="text-dark fs-4 fw-bold" id="marca-nav"> M-Store </span>
+					</a>
+					<a href="index.html">Tienda</a>
+					<a>Contacto</a>
+					<button type="button" class="modoOscuro" id="modoOscuro">
+						<span><i class="fas fa-sun"></i></span>
+						<span><i class="fas fa-moon"></i></span>
+					</button>
+					<button type="button" class="btnCarrito" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+						<img src="imagenes/cart-navbar.png" class="iconoCarrito" alt="Carrito" />
+					</button>
+				</div>
+			</nav>
+		</div>
+
+		<!--------------------- FIN NAVBAR --------------------->
+
+		<!--------------------- FORMULARIO DE CONTACTO --------------------->
+		<h1 class="tituloContacto">Contacto</h1>
+		<div class="cuerpoContacto container-fluid">
+			<h2 class="subtituloContacto">Habla con nosotros</h2>
+			<form action="#">
+				<input type="text" placeholder="Tu nombre" />
+				<input type="text" placeholder="Tu apellido" />
+				<input type="text" placeholder="Tu correo electronico" />
+				<textarea placeholder="Tu consulta" id="" cols="30" rows="10" required></textarea>
+				<button type="submit" value="Enviar" class="botonContacto">Enviar</button>
+			</form>
+		</div>
+		<!--------------------- FIN FORMULARIO DE CONTACTO --------------------->
+
+		<!--------------------- FOOTER --------------------->
+
+		<footer class="pieDePagina">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="imagenes/icono-nav2.png" alt="Icono Tienda" />
+					<span class="fs-4 fw-bold" id="marca-nav"> M-Store </span>
+				</a>
+			</div>
+			<div class="container-fluid text-center">
+				<a href="index.html">Inicio</a>
+				<a href="#Tienda">Tienda</a>
+				<a href="contacto.html">Contacto</a>
+			</div>
+		</footer>
+
+		<!--------------------- FIN FOOTER --------------------->
+
+		<!--------------------- SCRIPTS --------------------->
+		<!-- jQuery -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Bootstrap CDN -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- JS -->
+		<script src="/Components/darkTheme.js"></script>
+		<script src="/Components/filtros.js"></script>
+		<script src="/Components/pago.js"></script>
+		<script type="module" src="app.js"></script>
+	</body>
+</html>

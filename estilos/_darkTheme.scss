@@ -1,0 +1,50 @@
+.modoOscuro {
+	background-color: #595a5a;
+	width: 5rem;
+	border-radius: 5rem;
+	height: 2.5rem;
+	border: none;
+	display: flex;
+	outline: none;
+	position: relative;
+	cursor: pointer;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 2.5rem;
+		height: 2.5rem;
+		position: absolute;
+		background: #f1f1f1;
+		top: 0;
+		left: 0;
+		right: unset;
+		border-radius: 10rem;
+		transition: 0.3s ease all;
+		box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+	}
+
+	&.active {
+		background: orange;
+		color: black;
+		&::after {
+			right: 0;
+			left: unset;
+		}
+	}
+
+	span {
+		width: 3rem;
+		height: 3rem;
+		line-height: 2.5rem;
+		display: block;
+		background: none;
+		color: #fff;
+	}
+}
+
+.itemProducto {
+	body.dark & {
+		background-color: rgb(168, 168, 168);
+	}
+}

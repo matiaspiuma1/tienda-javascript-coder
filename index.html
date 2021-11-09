@@ -1,84 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- SEO -->
+		<meta name="description" content="Tienda de periféricos donde vas a encontrar el producto que quieras" />
+		<meta name="keywords" content="periféricos, mouses, mouse, teclados, teclado, monitor, monitores, tienda" />
 
-    <!-- FUENTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+		<!-- FUENTE -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
 
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<!-- FONT AWESOME -->
+		<script src="https://kit.fontawesome.com/396509588b.js" crossorigin="anonymous"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>M-Store | Tienda de Periféricos</title>
-</head>
+		<!-- BOOTSTRAP -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
 
-<body>
-    <!--------------------- NAVBAR --------------------->
+		<!-- CSS -->
+		<link rel="stylesheet" href="/css/styles.css" />
 
-    <div class="container-fluid barraNavegacion">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menuNavbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="imagenes/icono-nav2.png" alt="Icono Tienda">
-                    <span class="text-dark fs-4 fw-bold" id="marca-nav">
-                        M-Store
-                    </span>
-                </a>
-                <button type="button" class="btnCarrito" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                    aria-controls="offcanvasRight"><img src="imagenes/cart-navbar.png" class="iconoCarrito"
-                        alt="Carrito">
-                </button>
-            </div>
-        </nav>
-    </div>
+		<title>M-Store | Tienda de Periféricos</title>
+	</head>
 
-    <!--------------------- FIN NAVBAR --------------------->
+	<body>
+		<!--------------------- NAVBAR --------------------->
 
-    <!--------------------- SECTION PRODUCTOS --------------------->
+		<div class="container-fluid barraNavegacion">
+			<nav class="navbar navbar-expand-lg navbar-secondary bg-secondary" id="menuNavbar">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="index.html">
+						<img src="imagenes/icono-nav2.png" alt="Icono Tienda" />
+						<span class="text-dark fs-4 fw-bold" id="marca-nav"> M-Store </span>
+					</a>
+					<a href="#Tienda">Tienda</a>
+					<a href="contacto.html">Contacto</a>
+					<button type="button" class="modoOscuro" id="modoOscuro">
+						<span><i class="fas fa-sun"></i></span>
+						<span><i class="fas fa-moon"></i></span>
+					</button>
+					<button type="button" class="btnCarrito" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+						<img src="imagenes/cart-navbar.png" class="iconoCarrito" alt="Carrito" />
+					</button>
+				</div>
+			</nav>
+		</div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 col-12">
-                <h1 class="text-center text-warning">Productos</h1>
-                <div class="productos"></div>
-            </div>
-        </div>
-    </div>
+		<!--------------------- FIN NAVBAR --------------------->
 
+		<!--------------------- HEADER --------------------->
+		<header class="headerBievenida">
+			<div class="imagenNosotros">
+				<img src="/imagenes/imagen-bienvenida.png" class="img-fluid w-100 imagenBienvenida" alt="Imagen Bievenida" />
+			</div>
+			<div class="sobreNosotros">
+				<h1 class="tituloSomos">¿Quiénes somos?</h1>
+				<p class="textoSomos">
+					Somos una tienda sobre periféricos para los amantes del gaming. Contamos con multiples productos en stock de diversas marcas con precios
+					actualizados en moneda local. Nos dedicamos a este rubro hace mas de 5 años.
+				</p>
+			</div>
+			<div>
+				<img src="/imagenes/imagen-tienda.jpg" class="img-fluid w-100" alt="Imagen Bievenida" />
+			</div>
+		</header>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header contenedorCanvas">
-            <h5 id="offcanvasRightLabel" class="tituloCanvas">Carrito</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body" id="contenedorCarrito">
-            <div class="precioTotal"></div>
-            <button type="button" class="finalizarCompraBtn">Finalizar compra</button>
-            <button type="button" class="finalizarCompraBtn">Vaciar carrito</button>
-        </div>
-    </div>
-    <!--------------------- FIN SECTION PRODUCTOS --------------------->
+		<!--------------------- SECTION PRODUCTOS --------------------->
 
+		<h1 class="text-center titulotienda" id="Tienda">Tienda</h1>
+		<div class="container-fluid" id="productos">
+			<div class="row">
+				<div class="col-md-2 col-12">
+					<h1 class="text-center tituloProductos">Filtros</h1>
+					<div class="listaFiltros">
+						<a href="#" class="categoriaItem" category="todo">Mostrar todo</a>
+						<a href="#" class="categoriaItem" category="Teclado">Teclados</a>
+						<a href="#" class="categoriaItem" category="Monitor">Monitores</a>
+						<a href="#" class="categoriaItem" category="Mouse">Mouses</a>
+					</div>
+				</div>
+				<div class="col-md-10 col-12">
+					<h1 class="text-center tituloProductos">Productos</h1>
+					<!-- ALERTA PARA PRODUCTOS -->
+					<div class="alert alert-success hide alertaProducto col-10 col-md-6" role="alert">¡Producto agregado correctamente!</div>
+					<div class="productos"></div>
+				</div>
+			</div>
+		</div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!--------------------- FIN SECTION PRODUCTOS --------------------->
 
-    <!-- Bootstrap CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+		<!--------------------- CARRITO --------------------->
 
-    <!-- JS -->
-    <script type="module" src="app.js"></script>
-</body>
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header contenedorCanvas">
+				<h5 id="offcanvasRightLabel" class="tituloCanvas">Carrito</h5>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body" id="contenedorCarrito">
+				<div class="precioTotal"></div>
+				<button type="button" class="finalizarCompraBtn">Finalizar compra</button>
+			</div>
+		</div>
 
+		<!--------------------- FIN CARRITO --------------------->
+
+		<!--------------------- FOOTER --------------------->
+
+		<footer class="pieDePagina">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="imagenes/icono-nav2.png" alt="Icono Tienda" />
+					<span class="fs-4 fw-bold" id="marca-nav"> M-Store </span>
+				</a>
+			</div>
+			<div class="container-fluid text-center">
+				<a href="index.html">Inicio</a>
+				<a href="#Tienda">Tienda</a>
+				<a href="contacto.html">Contacto</a>
+			</div>
+		</footer>
+
+		<!--------------------- FIN FOOTER --------------------->
+
+		<!-- NO DARLE IMPORTANCIA -->
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="staticBackdrop"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">Compra realizada</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">¡Su compra se realizó con éxito!</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-warning btnRefrescarPag" data-bs-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- NO DARLE IMPORTANCIA -->
+
+		<!--------------------- SCRIPTS --------------------->
+		<!-- jQuery -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Bootstrap CDN -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- JS -->
+		<script src="/Components/darkTheme.js"></script>
+		<script src="/Components/filtros.js"></script>
+		<script src="/Components/pago.js"></script>
+		<script type="module" src="app.js"></script>
+	</body>
 </html>
