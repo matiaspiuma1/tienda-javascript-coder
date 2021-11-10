@@ -3,11 +3,11 @@ $('.finalizarCompraBtn').click(imprimirPasarelaPago);
 
 //Esta funcion sirve para mostrar los inputs para completar y terminar la compra
 function imprimirPasarelaPago() {
-	//Oculto los productos para que se muestre los campos a completar
-	$('#contenedorCarrito div').hide();
-	//Tambien el boton de compra
-	$('.finalizarCompraBtn').hide();
-	$('#contenedorCarrito').append(`
+    //Oculto los productos para que se muestre los campos a completar
+    $('#contenedorCarrito div').hide();
+    //Tambien el boton de compra
+    $('.finalizarCompraBtn').hide();
+    $('#contenedorCarrito').append(`
                                     <div class="contenedorInputsPago">
                                         <div>
                                             <h2 class="tituloPago">Datos de Pago</h2>
@@ -33,15 +33,15 @@ function imprimirPasarelaPago() {
                                     <button type="button" class="btn btn-primary btnPago" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pagar</button>
                                     </div>`);
 
-	//Creo el evento para vaciar el carrito y que no quede ningun producto
-	$('.btnPago').on('click', vaciarCarrito);
-	function vaciarCarrito() {
-		$('#contenedorCarrito').empty();
-	}
+    //Creo el evento para vaciar el carrito y que no quede ningun producto
+    $('.btnPago').on('click', vaciarCarrito);
+    function vaciarCarrito() {
+        $('#contenedorCarrito').empty();
+    }
 
-	//Creo un evento tambien para despues refrescar la pagina y puedan volver a comprar
-	$('.btnRefrescarPag').click(refrescarPag);
-	function refrescarPag() {
-		location.reload();
-	}
+    //Creo un evento tambien para despues refrescar la pagina y puedan volver a comprar
+    $('.btnRefrescarPag').click(refrescarPag);
+    function refrescarPag() {
+        location.reload();
+    }
 }

@@ -37,6 +37,8 @@ function agregarAlCarrito(e) {
 	agregarItemAlCarrito(tituloItem, precioItem, imagenItem);
 }
 
+
+
 //Esta constante sirve para seleccionar donde van a ir los items en el carrito
 const contenedorDeProductosElemento = document.querySelector('#contenedorCarrito');
 
@@ -56,7 +58,6 @@ function agregarItemAlCarrito(tituloItem, precioItem, imagenItem) {
 		if (titulosProductos[i].textContent === tituloItem) {
 			let cantidadProducto = titulosProductos[i].parentElement.parentElement.parentElement.querySelector('.inputCantidadItem');
 			cantidadProducto.value++;
-			$('.toast').toast('show');
 			actualizarTotalCarrito();
 			return;
 		}
@@ -65,7 +66,7 @@ function agregarItemAlCarrito(tituloItem, precioItem, imagenItem) {
 	//Aca esta la forma en la los productos se muestran en el carrito
 	const contenedorProductos = document.createElement('div');
 	const pintarProductoCarrito = `
-            <div class="row itemProducto">
+			<div class="row itemProducto">
                 <div class="col-6">
                     <div class="d-flex align-items-center h-100">
                         <img src=${imagenItem} class="imagenCanvas" alt="${tituloItem}">
@@ -79,11 +80,11 @@ function agregarItemAlCarrito(tituloItem, precioItem, imagenItem) {
                 </div>
                 <div class="col-4">
                     <div class=" d-flex justify-content-between align-items-center h-100">
-                        <input class="inputCantidadItem" type="number" value="1">
+                        <input class="inputCantidadItem" id="prueba" type="number" value="1">
                         <button class="btn btn-danger borrarProducto" type="button">X</button>
                     </div>
                 </div>
-            </div>`;
+            </div> `;
 
 	//Aca se muestran los productos en el carrito
 	contenedorProductos.innerHTML = pintarProductoCarrito;
@@ -98,6 +99,7 @@ function agregarItemAlCarrito(tituloItem, precioItem, imagenItem) {
 	//Funcion para actualizar el total del carrito
 	actualizarTotalCarrito();
 }
+
 
 //Esta funcion es para que se muestre el precio total del carrito
 function actualizarTotalCarrito() {
@@ -117,7 +119,7 @@ function actualizarTotalCarrito() {
 		total = total + precioSolo * cantidadSeleccionada;
 	});
 
-	cantidadTotalPrecio.innerHTML = `Precio total: $${total.toFixed(3)}`;
+	cantidadTotalPrecio.innerHTML = `Precio total: $${total.toFixed(3)} `;
 }
 
 //Funcion para borrar el producto del carrito y actualizar el precio
@@ -130,6 +132,7 @@ function borrarProductoCarrito(e) {
 	actualizarTotalCarrito();
 }
 
+//Funcion para que el producto siempre sea mas de uno y no se pueda bajar a 0
 function cantidadIngresada(e) {
 	//Capturo el evento del input
 	const input = e.target;
