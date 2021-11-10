@@ -52,13 +52,16 @@
 		<!--------------------- FORMULARIO DE CONTACTO --------------------->
 		<h1 class="tituloContacto">Contacto</h1>
 		<div class="cuerpoContacto container-fluid">
+			<div class="contenedorAlerta">
+				<div class="alert alert-success hide alertaProducto col-10 col-md-8" role="alert">¡Se ha enviado tu consulta!</div>
+			</div>
 			<h2 class="subtituloContacto">Habla con nosotros</h2>
-			<form action="#">
+			<form>
 				<input type="text" placeholder="Tu nombre" />
 				<input type="text" placeholder="Tu apellido" />
 				<input type="text" placeholder="Tu correo electronico" />
-				<textarea placeholder="Tu consulta" id="" cols="30" rows="10" required></textarea>
-				<button type="submit" value="Enviar" class="botonContacto">Enviar</button>
+				<textarea placeholder="Tu consulta" cols="30" rows="10" required></textarea>
+				<button type="click" value="Enviar" class="botonContacto">Enviar</button>
 			</form>
 		</div>
 		<!--------------------- FIN FORMULARIO DE CONTACTO --------------------->
@@ -97,9 +100,8 @@
 		></script>
 
 		<!-- JS -->
+		<script src="/Components/alertaContacto.js"></script>
 		<script src="/Components/darkTheme.js"></script>
-		<script src="/Components/filtros.js"></script>
-		<script src="/Components/pago.js"></script>
 		<script type="module" src="app.js"></script>
 	</body>
 </html>
